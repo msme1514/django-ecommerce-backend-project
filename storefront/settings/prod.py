@@ -9,7 +9,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['musbuy-stg-f8ad1f24fccc.herokuapp.com']
+ALLOWED_HOSTS = ['souq-prod-87098457f05b.herokuapp.com']
 
 DATABASES = {
     'default': dj_database_url.config()
@@ -23,7 +23,7 @@ CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": REDIS_URL,
-        "TIMEOUT" : 5*60,
+        "TIMEOUT": 10*60,
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
